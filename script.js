@@ -1,3 +1,5 @@
+const celebrationEmojis = document.querySelectorAll('.celebration');
+
 const clickSound = new Audio('click.mp3');
 const winSound = new Audio('win.mp3');
 const tieSound = new Audio('tie.mp3');
@@ -29,6 +31,7 @@ function checkWinner() {
       return;
       winSound.play();
 pattern.forEach(i => cells[i].classList.add('win'));
+celebrationEmojis.forEach(el => el.style.display = 'block');
 
     }
   }
@@ -65,6 +68,7 @@ function resetGame() {
   isGameActive = true;
   status.textContent = "Player X's turn";
   resetSound.play();
+celebrationEmojis.forEach(el => el.style.display = 'none');
 
 }
 
