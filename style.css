@@ -97,7 +97,23 @@ body {
     border: 3px solid red;
     border-radius: 50%;
   }
-  
+  @keyframes win-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px 5px #0ff;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px #ff0040;
+    transform: scale(1.1);
+  }
+}
+
+.win {
+  border: 3px solid red;
+  border-radius: 50%;
+  animation: win-glow 1s ease-in-out infinite;
+}
+
   #reset-btn {
     padding: 10px 20px;
     background-color: #00ffe7;
