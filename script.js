@@ -28,6 +28,7 @@ function checkWinner() {
       isGameActive = false;
       return;
       winSound.play();
+pattern.forEach(i => cells[i].classList.add('win'));
 
     }
   }
