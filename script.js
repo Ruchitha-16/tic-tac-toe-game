@@ -27,11 +27,12 @@ function checkWinner() {
     if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
       pattern.forEach(i => cells[i].classList.add('win'));
       status.textContent = `Player ${gameBoard[a]} wins!`;
+      celebrationEmojis.forEach(el => el.style.display = 'block');
+
       isGameActive = false;
       return;
       winSound.play();
 pattern.forEach(i => cells[i].classList.add('win'));
-celebrationEmojis.forEach(el => el.style.display = 'block');
 
     }
   }
@@ -64,11 +65,13 @@ function resetGame() {
     cell.textContent = '';
     cell.classList.remove('win');
   });
+  celebrationEmojis.forEach(el => el.style.display = 'none');
+
   currentPlayer = 'X';
   isGameActive = true;
   status.textContent = "Player X's turn";
   resetSound.play();
-celebrationEmojis.forEach(el => el.style.display = 'none');
+
 
 }
 
