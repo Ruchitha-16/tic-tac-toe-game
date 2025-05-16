@@ -1,4 +1,5 @@
 const celebrationEmojis = document.querySelectorAll('.celebration');
+const winMessage = document.getElementById('winMessage');
 
 const clickSound = new Audio('click.mp3');
 const winSound = new Audio('win.mp3');
@@ -28,6 +29,8 @@ function checkWinner() {
       pattern.forEach(i => cells[i].classList.add('win'));
       status.textContent = `Player ${gameBoard[a]} wins!`;
       celebrationEmojis.forEach(el => el.style.display = 'block');
+      winMessage.style.display = 'block';
+
 
       isGameActive = false;
       return;
@@ -66,6 +69,8 @@ function resetGame() {
     cell.classList.remove('win');
   });
   celebrationEmojis.forEach(el => el.style.display = 'none');
+  winMessage.style.display = 'none';
+
 
   currentPlayer = 'X';
   isGameActive = true;
