@@ -22,27 +22,24 @@
       <div class="win-message" id="winMessage">You Won the Game!</div>
 
       <div class="turn-indicator"></div>
-      <div class="player">
-        <img src="avatar.png" class="avatar" />
-        <p>Player O</p>
-      </div>
-    </div>
+      <div class="game-area">
+  <div class="player player-left">
+    <img src="avatar.png" class="avatar" />
+    <p>Player X</p>
+  </div>
 
+  <div>
     <div id="game-status">Player X's turn</div>
     <div class="board" id="board">
-      <div class="cell" data-index="0"></div>
-      <div class="cell" data-index="1"></div>
-      <div class="cell" data-index="2"></div>
-      <div class="cell" data-index="3"></div>
-      <div class="cell" data-index="4"></div>
-      <div class="cell" data-index="5"></div>
-      <div class="cell" data-index="6"></div>
-      <div class="cell" data-index="7"></div>
-      <div class="cell" data-index="8"></div>
+      <!-- cells -->
     </div>
-    <button id="reset-btn">New Game</button>
-
   </div>
+
+  <div class="player player-right">
+    <img src="avatar.png" class="avatar" />
+    <p>Player O</p>
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>
