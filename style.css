@@ -1,0 +1,128 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(#000428, #004e92);
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .home-screen {
+    text-align: center;
+    padding-top: 30px;
+  }
+  .logo {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  .menu-btn {
+    background: #00ffe7;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    margin: 10px 0;
+    border-radius: 25px;
+    box-shadow: 0 0 10px cyan;
+    cursor: pointer;
+  }
+  .profile {
+    background: #ffc107;
+  }
+  .hex-btn {
+    margin: 10px;
+    background: transparent;
+    border: 2px solid cyan;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px cyan;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .players {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  .turn-indicator {
+    width: 60px;
+    height: 10px;
+    background: yellow;
+    border-radius: 10px;
+  }
+  
+  #game-status {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .cell {
+    width: 90px;
+    height: 90px;
+    font-size: 2em;
+    border: 2px solid #0ff;
+    color: #00ffe7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .cell:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  .win {
+    border: 3px solid red;
+    border-radius: 50%;
+  }
+  
+  #reset-btn {
+    padding: 10px 20px;
+    background-color: #00ffe7;
+    border: none;
+    font-size: 1.2em;
+    color: #000;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+  }
+  
+  #reset-btn:hover {
+    background-color: #0ff;
+    transform: scale(1.05);
+  }
+  
+  .coins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #ffd700;
+  }
+  .coin {
+    width: 25px;
+    margin-right: 8px;
+  }
+  
