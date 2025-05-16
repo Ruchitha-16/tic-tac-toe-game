@@ -156,4 +156,26 @@ body {
   to   { transform: scale(1.3) rotate(10deg); }
 }
 
+.win-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #00ffe7;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #00ffe7;
+  z-index: 1000;
+  animation: win-bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes win-bounce {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
 
