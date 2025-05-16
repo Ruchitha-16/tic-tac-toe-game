@@ -1,3 +1,7 @@
+const clickSound = new Audio('click.mp3');
+const winSound = new Audio('win.mp3');
+const tieSound = new Audio('tie.mp3');
+const resetSound = new Audio('reset.mp3');
 
 const cells = document.querySelectorAll('.cell');
 const status = document.getElementById('game-status');
@@ -6,6 +10,8 @@ const resetBtn = document.getElementById('reset-btn');
 let currentPlayer = 'X';
 let gameBoard = Array(9).fill('');
 let isGameActive = true;
+clickSound.play();
+
 
 function checkWinner() {
   const winPatterns = [
@@ -21,12 +27,16 @@ function checkWinner() {
       status.textContent = `Player ${gameBoard[a]} wins!`;
       isGameActive = false;
       return;
+      winSound.play();
+
     }
   }
 
   if (!gameBoard.includes('')) {
     status.textContent = "It's a tie!";
     isGameActive = false;
+    tieSound.play();
+
   }
 }
 
@@ -53,6 +63,8 @@ function resetGame() {
   currentPlayer = 'X';
   isGameActive = true;
   status.textContent = "Player X's turn";
+  resetSound.play();
+
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleCellClick));
