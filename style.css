@@ -114,15 +114,4 @@ body {
     transform: scale(1.05);
   }
   
-  .coins {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    color: #ffd700;
-  }
-  .coin {
-    width: 25px;
-    margin-right: 8px;
-  }
   
